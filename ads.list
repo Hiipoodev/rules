@@ -1,0 +1,99 @@
+# Grindr iOS (26.12.0) 广告与追踪拦截 RULE-SET
+# 用法：在 Surge 配置的 [Rule] 段落靠前位置添加：
+# RULE-SET,grindr_ads.list,REJECT
+
+# --- AppLovin MAX ---
+DOMAIN-SUFFIX,applovin.com
+DOMAIN-SUFFIX,applvn.com
+DOMAIN-SUFFIX,applov.in
+
+# --- Google Ad Manager / AdMob / 广告测量 ---
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,doubleclick-cn.net
+DOMAIN-SUFFIX,googlesyndication.com
+DOMAIN-SUFFIX,googleadservices.com
+DOMAIN,imasdk.googleapis.com
+DOMAIN,mediation.goog
+DOMAIN,fundingchoicesmessages.google.com
+DOMAIN-SUFFIX,app-analytics-services.com
+DOMAIN-SUFFIX,app-analytics-services-att.com
+DOMAIN,admob-gmats.uc.r.appspot.com
+DOMAIN,badad.googleplex.com
+
+# --- InMobi ---
+DOMAIN-SUFFIX,inmobi.com
+DOMAIN-SUFFIX,inmobicdn.net
+DOMAIN,spadsync.com
+
+# --- Vungle / Liftoff ---
+DOMAIN-SUFFIX,ads.vungle.com
+DOMAIN,cdn-lb.vungle.com
+
+# --- Unity Ads / LevelPlay ---
+DOMAIN-SUFFIX,unityads.unity3d.com
+DOMAIN-SUFFIX,mediation.unity3d.com
+
+# --- IronSource / Supersonic ---
+DOMAIN-SUFFIX,supersonicads.com
+DOMAIN-SUFFIX,ironsrc.com
+DOMAIN,x.blueduckredapple.com
+DOMAIN,x.thecatmachine.com
+DOMAIN,x.everestop.io
+
+# --- Mintegral ---
+DOMAIN-SUFFIX,mtgglobals.com
+DOMAIN-SUFFIX,rayjump.com
+DOMAIN-SUFFIX,mintegral.net
+DOMAIN,www.mintegral.com
+DOMAIN,d1tru86qrby720.cloudfront.net
+
+# --- Digital Turbine / Fyber / Inneractive ---
+DOMAIN-SUFFIX,inner-active.mobi
+DOMAIN,www.inner-active.com
+DOMAIN,skadnetworks.fyber.com
+
+# --- PubMatic OpenWrap ---
+DOMAIN-SUFFIX,pubmatic.com
+
+# --- Verve / PubNative / Smaato ---
+DOMAIN-SUFFIX,pubnative.net
+DOMAIN-SUFFIX,verve.com
+DOMAIN-SUFFIX,vervegroupinc.net
+DOMAIN-SUFFIX,smaato.net
+DOMAIN-SUFFIX,smaatolabs.net
+
+# --- BidMachine ---
+DOMAIN,api.bidmachine.io
+
+# --- Meta / Facebook Audience Network（保留登录域名） ---
+DOMAIN,an.facebook.com
+DOMAIN,ep1.facebook.com
+DOMAIN,ep2.facebook.com
+DOMAIN,ep6.facebook.com
+
+# --- DoubleVerify 广告可见性验证 ---
+DOMAIN,cdn.doubleverify.com
+DOMAIN,cdn.dv.tech
+
+# --- AppsFlyer 广告归因与收入回传 ---
+DOMAIN-SUFFIX,appsflyersdk.com
+DOMAIN-SUFFIX,appsflyer-cn.com
+DOMAIN-SUFFIX,whappsflyer.com
+DOMAIN,app.appsflyer.com
+
+# --- 隐私同意弹窗、归因回传与 Grindr 广告遥测 ---
+DOMAIN,global.ketchcdn.com
+DOMAIN,postbacks-app.com
+DOMAIN,telemetry.grindr.mobi
+DOMAIN,www.grindrads.com
+
+# --- 可选拦截（按需取消行首 # 注释） ---
+# Braze 应用内营销卡片/活动横幅（不需要官方活动弹窗时可开启）
+DOMAIN,gaspra.iad-03.braze.com
+# AppsFlyer 深链跳转域名
+DOMAIN,grindr.onelink.me
+DOMAIN,go.onelink.me
+PubNative 获取公网 IP 接口
+DOMAIN,api.ipify.org
+# Grindr 26.12.0 DoH 探测域名（注意：全局拦截会影响其他使用 dns.google 的服务）
+# DOMAIN,dns.google
